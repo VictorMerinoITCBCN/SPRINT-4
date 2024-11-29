@@ -1,0 +1,44 @@
+.Register {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: .5em;
+    border: 1px solid #aaa;
+
+    h1 {
+        text-align: center;
+    }
+
+    input, button {
+        height: 50px;
+        padding: 10px;
+    }
+
+    button {
+        background: #000;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+
+        &:hover {
+            background: #444;
+        }
+    }
+
+    .msg {
+        color: #fff;
+        font-weight: 600;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .error-msg {
+        background: #ec5a5a;
+    }
+
+    .response-msg {
+        background: #5aec61;
+    }
+}
