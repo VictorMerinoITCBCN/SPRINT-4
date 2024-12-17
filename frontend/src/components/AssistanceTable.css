@@ -8,17 +8,18 @@
     }
 
     th {
-        background: #000;
+        background: #222;
         color: #fff;
     }
 
     .assistance {
         display: flex;
-        gap: 5px;
         padding: 0;
          & > * {
             padding: 10px 20px;
             width: 100%;
+            cursor: pointer;
+            border: none;
          }
     }
 

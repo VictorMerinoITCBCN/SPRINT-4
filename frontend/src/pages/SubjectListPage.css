@@ -1,13 +1,28 @@
 .SubjectList {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 500px;
-    cursor: pointer;
 
     .subject {
+        display: flex;
+        gap: 20px;
+        align-items: baseline;
         padding: 20px;
         width: 100%;
+        background: #ccc;
+        transition: all .1s;
+        
+        &:hover {
+            background: linear-gradient(130deg ,var(--color) 70%, #ccc 30%);
+        }
+
+        button {
+            padding: 5px;
+            margin-left: auto;
+            cursor: pointer;
+        }
     }
 }
 

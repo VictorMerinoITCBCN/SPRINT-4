@@ -8,6 +8,8 @@ import { NotAllowed } from "./pages/NotAllowed";
 import { SchedulePage } from "./pages/Schedule"
 import { AssistancePage } from "./pages/Assistance";
 import { SubjectListPage } from "./pages/SubjectListPage";
+import { Matriculate } from "./pages/Matriculate";
+import { StudentAssistances } from "./pages/StudentAssistances";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/assistance/subject/:id" element={<AssistancePage />}/>
         <Route path="/not-allowed" element={<NotAllowed />} />
         <Route path="/schedule" element={<SchedulePage />} />
+        <Route path="/matriculate" element={<Matriculate />} />
+        <Route path="/student/assistances" element={<StudentAssistances />} />
       </Routes>
     </BrowserRouter>
   )

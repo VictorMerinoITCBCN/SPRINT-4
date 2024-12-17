@@ -11,7 +11,7 @@ export const AssistanceRow = ({data}: {data: Assistance}) => {
     const [updateBtnContent, setUpdateBtnContent] = useState<string | JSX.Element>("Update")
     const [disableBtn, setDisableBtn] = useState(true) 
 
-    let buttonClassName = "status " + status[index]
+    const buttonClassName = "status " + status[index]
     
     const toggleState = () => {
         const newIndex = (index + 1) % status.length

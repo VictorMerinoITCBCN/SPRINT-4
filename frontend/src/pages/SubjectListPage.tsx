@@ -17,7 +17,6 @@ export const SubjectListPage = () => {
         const token = localStorage.getItem("token")
         const getSubjects = async () => {
             const subjects = await API.get(`/subjects/${user?.id}?token=${token}`)
-
             setSubjects(subjects.subjects)
         }
 
@@ -30,9 +29,10 @@ export const SubjectListPage = () => {
         <Nav role={user?.role.id}/>
         <main className="SubjectList" >
             {subjects ? subjects.map(sub => (
-                <div className="subject" style={{background: "#" + stringToHex(sub.name)}} key={sub.id} onClick={() => navigate("/assistance/subject/" + sub.id)}>
+                <div className="subject" style={{"--color": "#" + stringToHex(sub.name)}} key={sub.id}>
                     <h3>{sub.name}</h3>
                     <small>{sub.room}</small>
+                    <button onClick={() => navigate("/assistance/subject/" + sub.id)}>Pasar Lista</button>
                 </div>
             )) : null}
         </main>

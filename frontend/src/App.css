@@ -6,11 +6,21 @@
 }
 
 #root {
+    --main-color: #fb1;
+    --main-color-2: #daa215;
+    --main-color-3: #e7e0cf;
+
     display: grid;
     place-content: center;
     min-height: 100vh;
-    --main-color: #fb1;
-    --main-color-2: #daa215;
+    background: var(--main-color-3);
+}
+
+main {
+    background: #eee;
+    padding: 50px;
+    border: 1px solid;
+    border-radius: 2em;
 }
 
 .loader {

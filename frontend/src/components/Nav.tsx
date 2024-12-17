@@ -17,6 +17,7 @@ export const Nav = ({role: role}: {role: number}) => {
             <>
                 <Link to={"/"}>Home</Link>
                 <Link to={"/schedule/"}>Schedule</Link>
+                <Link to={"/student/assistances"}>Assistances</Link>
             </>
         )
     }
@@ -26,7 +27,8 @@ export const Nav = ({role: role}: {role: number}) => {
             <>
                 <Link to={"/"}>Home</Link>
                 <Link to={"/schedule/"}>Schedule</Link>
-                <Link to={"/assistances"}>Assistanecs</Link>
+                <Link to={"/assistances"}>Assistances</Link>
+                <Link to={"/matriculate"}>Matriculate</Link>
             </>
         )
     }
@@ -38,6 +40,7 @@ export const Nav = ({role: role}: {role: number}) => {
             <Link to={"/register/student"}>Register Student</Link>
             <Link to={"/register/teacher"}>Register Teacher</Link>
             <Link to={"/register/admin"}>Register Admin</Link>
+            <Link to={"/matriculate"}>Matriculate</Link>
             </>
         )
     }

@@ -8,12 +8,19 @@ export const parseTime = (time: number) => {
 }
 
 export const stringToHex = (str: string) => {
-    let hex = 0
+    let hash = 0;
+  
     for (let i = 0; i < str.length; i++) {
-        hex += str.charCodeAt(i)
+      hash = str.charCodeAt(i) + ((hash << 5) - hash)
+      hash = hash & hash
     }
+  
 
-    hex += 790
-
-    return hex
+    let color = ""
+    for (let i = 0; i < 3; i++) {
+      const value = (hash >> (i * 8)) & 0xff
+      color += ("00" + value.toString(16)).slice(-2)
+    }
+  
+    return color;
 }
