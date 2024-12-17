@@ -9,6 +9,8 @@
     display: grid;
     place-content: center;
     min-height: 100vh;
+    --main-color: #fb1;
+    --main-color-2: #daa215;
 }
 
 .loader {

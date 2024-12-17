@@ -1,4 +1,4 @@
-.Register {
+.LogForm {
     width: 370px;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,16 @@
     }
 
     button {
-        background: #000;
+        background: var(--main-color);
         color: #fff;
         font-size: 1.2em;
         font-weight: bold;
+        border: none;
+        transition: all .5s;
 
         &:hover {
-            background: #444;
+            background: var(--main-color-2);
+            border-radius: 5em;
         }
     }
 

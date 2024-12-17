@@ -1,0 +1,29 @@
+.schedule {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+}
+
+.schedule h3 {
+    padding: 20px;
+    text-align: center;
+    background: #222;
+    color: #fff;
+}
+
+.schedule .subject {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px;
+    height: 100px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span {
+        text-align: right;
+    }
+}

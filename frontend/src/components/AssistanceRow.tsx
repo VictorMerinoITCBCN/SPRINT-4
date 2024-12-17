@@ -22,17 +22,17 @@ export const AssistanceRow = ({data}: {data: Assistance}) => {
     }
 
     const updateAssistance = async () => {
+        const token = localStorage.getItem("token")
         setUpdateBtnContent(<Spiner/>)
         setDisableBtn(true)
 
         const body = {
             "student_id": data.student.id,
-            "teacher_id": data.teacher.id,
             "subject_id": data.subject.id,
             "assistance_status": status[index]
           }
 
-        const newID = await API.put("/subject/assistance/"+ assistID, body)
+        const newID = await API.put("/assistance/"+ assistID + "?token=" + token, body)
 
         setAssistID(newID.id)
 
